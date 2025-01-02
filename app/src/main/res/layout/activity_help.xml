@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="@color/white"
+    tools:context=".HelpActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <TextView
+                android:id="@+id/FAQ"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="FAQ's"
+                android:textSize="24sp"
+                android:textColor="@color/orange"
+                android:textStyle="bold"
+                android:padding="10sp"
+                android:layout_marginTop="5dp"
+                android:layout_centerHorizontal="true"/>
+
+            <TextView
+                android:id="@+id/faq1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="1. What is Kids Mart?"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/charcoal"
+                android:layout_below="@id/FAQ"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"/>
+
+            <TextView
+                android:id="@+id/ans1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Kids Mart is an Android application designed for parents and guardians to easily shop for a wide range of children’s products, including clothing, toys, accessories, and educational materials."
+                android:textSize="15sp"
+                android:textColor="@color/charcoal"
+                android:layout_below="@id/faq1"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"/>
+
+            <View
+                android:id="@+id/divider1"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/ans1"
+                android:background="#D3D3D3"/>
+
+            <TextView
+                android:id="@+id/faq2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="2. How do I create an account on Kids Mart?"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/charcoal"
+                android:layout_below="@id/divider1"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"/>
+
+            <TextView
+                android:id="@+id/ans2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="To create an account, download the Kids Mart app, click on the 'Register' option, and fill in the required details. You will also need to verify your identity using a verification email sent to your gmail account."
+                android:layout_below="@id/faq2"
+                android:textSize="15sp"
+                android:textColor="@color/charcoal"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"/>
+
+            <View
+                android:id="@+id/divider2"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/ans2"
+                android:background="#D3D3D3"/>
+
+            <TextView
+                android:id="@+id/faq3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="3. What features does the app offer?"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/charcoal"
+                android:layout_below="@id/divider2"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"/>
+
+            <TextView
+                android:id="@+id/ans3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Kids Mart provides features such as product browsing, detailed product descriptions, search and filter options, a secure checkout process, order tracking, personalized recommendations, and user profile management."
+                android:layout_below="@id/faq3"
+                android:textSize="15sp"
+                android:textColor="@color/charcoal"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"/>
+
+            <View
+                android:id="@+id/divider3"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/ans3"
+                android:background="#D3D3D3"/>
+
+            <TextView
+                android:id="@+id/faq4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="4. Can I track my orders?"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/charcoal"
+                android:layout_below="@id/divider3"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"/>
+
+            <TextView
+                android:id="@+id/ans4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Yes, you can track your orders by navigating to the 'Orders' section of the app, where you will find details about the status and details of your orders."
+                android:layout_below="@id/faq4"
+                android:textSize="15sp"
+                android:textColor="@color/charcoal"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"/>
+
+            <View
+                android:id="@+id/divider4"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/ans4"
+                android:background="#D3D3D3"/>
+
+            <TextView
+                android:id="@+id/faq5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="5. How do I find specific products?"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/charcoal"
+                android:layout_below="@id/divider4"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"/>
+
+            <TextView
+                android:id="@+id/ans5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="You can use the search bar to find specific products by entering the product name, category, or brand. Additionally, you can use the filtering options to refine your search based on criteria like price range, size, and color."
+                android:layout_below="@id/faq5"
+                android:textSize="15sp"
+                android:textColor="@color/charcoal"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"/>
+
+            <View
+                android:id="@+id/divider5"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/ans5"
+                android:background="#D3D3D3"/>
+
+            <TextView
+                android:id="@+id/faq6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="6. Are customer reviews available for products?"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/charcoal"
+                android:layout_below="@id/divider5"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"/>
+
+            <TextView
+                android:id="@+id/ans6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Yes, customer reviews and ratings are available for each product. This feature allows you to make informed purchase decisions based on the experiences of other customers."
+                android:layout_below="@id/faq6"
+                android:textSize="15sp"
+                android:textColor="@color/charcoal"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"/>
+
+            <View
+            android:id="@+id/divider6"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/ans6"
+            android:background="#D3D3D3"/>
+
+            <TextView
+                android:id="@+id/faq7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="7. How do I manage my profile?"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/charcoal"
+                android:layout_below="@id/divider6"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"/>
+
+            <TextView
+                android:id="@+id/ans7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="You can manage your profile by going to the 'Profile' section in the app. Here, you can update your personal information, manage shipping addresses, and update payment methods."
+                android:layout_below="@id/faq7"
+                android:textSize="15sp"
+                android:textColor="@color/charcoal"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"/>
+
+            <View
+                android:id="@+id/divider7"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/ans7"
+                android:background="#D3D3D3"/>
+
+            <TextView
+                android:id="@+id/faq8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="8. Is the app safe to use?"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/charcoal"
+                android:layout_below="@id/divider7"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"/>
+
+            <TextView
+                android:id="@+id/ans8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Yes, Kids Mart prioritizes user safety. The app implements secure authentication methods, including email verification, and ensures that your personal and payment information is protected."
+                android:layout_below="@id/faq8"
+                android:textSize="15sp"
+                android:textColor="@color/charcoal"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"/>
+
+            <View
+                android:id="@+id/divider8"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/ans8"
+                android:background="#D3D3D3"/>
+
+            <TextView
+                android:id="@+id/faq9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="9. Can I cancel my order?"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/charcoal"
+                android:layout_below="@id/divider8"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"/>
+
+            <TextView
+                android:id="@+id/ans9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Yes, you can cancel your order within a specified timeframe after placing it. To do so, navigate to your order history in the app, select the order you want to cancel, and follow the cancellation process. Please note that orders that have already been shipped or are out for delivery cannot be canceled."
+                android:layout_below="@id/faq9"
+                android:textSize="15sp"
+                android:textColor="@color/charcoal"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"/>
+
+            <View
+                android:id="@+id/divider9"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/ans9"
+                android:background="#D3D3D3"/>
+
+            <TextView
+                android:id="@+id/faq10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="10. Are there any shipping charges?"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/charcoal"
+                android:layout_below="@id/divider9"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"/>
+
+            <TextView
+                android:id="@+id/ans10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Shipping charges may apply based on your location and the total value of your order. For orders above a certain amount, we offer free shipping. You can view the shipping fees during the checkout process before finalizing your order."
+                android:layout_below="@id/faq10"
+                android:textSize="15sp"
+                android:textColor="@color/charcoal"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"/>
+
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

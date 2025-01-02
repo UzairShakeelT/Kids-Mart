@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="@color/white"
+    tools:context=".DetailedProductActivity">
+
+    <ProgressBar
+        android:id="@+id/detailProgressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:indeterminateTint="@color/orange"
+        android:visibility="gone"/>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/bottomLayout">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/imgDetail"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/upload_img"
+                android:background="#f8f8f8"/>
+
+            <ImageButton
+                android:id="@+id/iconCart"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/baseline_shopping_cart_24"
+                android:background="@color/transparent"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="15dp"
+                android:scaleType="fitXY"/>
+
+            <TextView
+                android:id="@+id/productPriceDetail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="24sp"
+                android:text="Price"
+                android:textColor="@color/orange"
+                android:textStyle="bold"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginBottom="5dp"
+                android:layout_below="@+id/imgDetail"/>
+
+            <TextView
+                android:id="@+id/productNameDetail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:text="Product Name"
+                android:textColor="@color/charcoal"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginBottom="9dp"
+                android:layout_below="@+id/productPriceDetail" />
+
+            <TextView
+                android:id="@+id/productDescriptionDetail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Product Description"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:textColor="#808080"
+                android:textSize="13sp"
+                android:textAllCaps="true"
+                android:layout_below="@+id/productNameDetail"/>
+
+            <TextView
+                android:id="@+id/tvColor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Color:"
+                android:textColor="@color/orange"
+                android:textSize="16sp"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/productDescriptionDetail"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp" />
+
+            <TextView
+                android:id="@+id/color"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/charcoal"
+                android:layout_below="@id/productDescriptionDetail"
+                android:layout_toEndOf="@id/tvColor"
+                android:layout_marginEnd="15dp" />
+
+            <TextView
+                android:id="@+id/tvCategory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Category:"
+                android:textColor="@color/orange"
+                android:textSize="16sp"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/tvColor"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginBottom="5dp"/>
+
+            <TextView
+                android:id="@+id/category"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textColor="@color/charcoal"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/tvColor"
+                android:layout_toEndOf="@id/tvCategory"
+                android:layout_marginEnd="15dp"
+                android:layout_marginBottom="5dp"/>
+
+            <View
+                android:id="@+id/divider1"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/tvCategory"
+                android:background="#D3D3D3"/>
+
+            <TextView
+                android:id="@+id/tvSize"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Size:"
+                android:textColor="@color/orange"
+                android:textSize="16sp"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/divider1"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginBottom="5dp"
+                android:visibility="gone"/>
+
+            <RadioGroup
+                android:id="@+id/sizeRadioGroup"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/tvSize"
+                android:visibility="gone">
+
+                <RadioButton
+                    android:id="@+id/size1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="1-2 Years"
+                    android:textColor="@color/charcoal"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"/>
+
+                <RadioButton
+                    android:id="@+id/size2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="3-4 Years"
+                    android:textColor="@color/charcoal"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"/>
+
+                <RadioButton
+                    android:id="@+id/size3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="5-6 Years"
+                    android:textColor="@color/charcoal"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="30dp"/>
+
+                <RadioButton
+                    android:id="@+id/size4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="7-8 Years"
+                    android:textColor="@color/charcoal"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"/>
+
+                <RadioButton
+                    android:id="@+id/size5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="9-10 Years"
+                    android:textColor="@color/charcoal"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"/>
+
+                <RadioButton
+                    android:id="@+id/size6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="11-12 Years"
+                    android:textColor="@color/charcoal"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"/>
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/tvReviews"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Reviews &amp; Ratings"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/charcoal"
+                android:layout_below="@id/sizeRadioGroup"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="5dp"/>
+
+            <TextView
+                android:id="@+id/reviewsTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvReviews"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginTop="10dp"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:textColor="@color/charcoal"/>
+
+            <RatingBar
+                android:id="@+id/detailRatingBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:numStars="5"
+                android:rating="0"
+                android:stepSize="0.5"
+                style="?android:attr/ratingBarStyleIndicator"
+                android:layout_below="@id/tvReviews"
+                android:progressTint="#ffd32c"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_alignParentRight="true"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/reviewRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/reviewsTextView"
+                android:layout_marginTop="15dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"/>
+
+        </RelativeLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <LinearLayout
+        android:id="@+id/bottomLayout"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true">
+
+        <Button
+            android:id="@+id/btnAddToCart"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:backgroundTint="@color/white"
+            android:text="Add To Cart"
+            android:textColor="@color/orange"
+            android:textSize="15sp"
+            android:layout_weight="1"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="5dp"
+            app:cornerRadius="40dp"
+            app:rippleColor="#33AAAAAA"
+            app:strokeColor="@color/orange"
+            app:strokeWidth="2dp"/>
+
+        <Button
+            android:id="@+id/btnBuyNow"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/orange"
+            android:padding="16dp"
+            android:text="Buy Now"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:layout_weight="1"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="30dp"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

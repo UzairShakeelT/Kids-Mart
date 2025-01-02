@@ -1,0 +1,140 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    tools:context=".BooksActivity">
+
+    <TextView
+        android:id="@+id/tvKidsMart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Books"
+        android:textSize="25sp"
+        android:textColor="@color/orange"
+        android:fontFamily="sans-serif-medium"
+        android:shadowColor="#C65134"
+        android:shadowRadius="2"
+        android:shadowDx="1"
+        android:shadowDy="1"
+        android:paddingHorizontal="24dp"
+        android:paddingVertical="10dp"
+        android:layout_centerHorizontal="true"/>
+
+    <SearchView
+        android:id="@+id/searchBooksView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="12dp"
+        android:background="@drawable/orange_border"
+        android:layout_below="@id/tvKidsMart"
+        android:textColor="@color/charcoal"
+        android:queryBackground="@null"
+        android:closeIcon="@drawable/baseline_clear_24"
+        android:focusable="false"
+        android:iconifiedByDefault="false"
+        android:queryHint="Search"
+        android:searchHintIcon="@null"
+        android:searchIcon="@drawable/baseline_search_24" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/searchBooksView"
+        android:padding="10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Spinner
+                android:id="@+id/filterColorBooks"
+                android:layout_width="170dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:entries="@array/colors"
+                android:textColor="@color/charcoal"/>
+
+            <EditText
+                android:id="@+id/minPriceBooks"
+                android:layout_width="170dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="20dp"
+                android:layout_below="@id/filterColorBooks"
+                android:hint="Min Price"
+                android:inputType="number"
+                android:textSize="15sp"
+                android:textColor="@color/charcoal"
+                android:backgroundTint="@color/orange"/>
+
+            <EditText
+                android:id="@+id/maxPriceBooks"
+                android:layout_width="170dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="10dp"
+                android:backgroundTint="@color/orange"
+                android:layout_below="@id/filterColorBooks"
+                android:layout_toEndOf="@id/minPriceBooks"
+                android:hint="Max Price"
+                android:textSize="15sp"
+                android:textColor="@color/charcoal"
+                android:inputType="number"/>
+
+            <TextView
+                android:id="@+id/resetFilters"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_below="@id/maxPriceBooks"
+                android:layout_marginStart="35dp"
+                android:text="Reset Filters"
+                android:textColor="@color/orange"
+                android:textSize="16sp"
+                android:clickable="true" />
+
+            <Button
+                android:id="@+id/applyFiltersButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="70dp"
+                android:layout_below="@id/maxPriceBooks"
+                android:layout_toEndOf="@id/resetFilters"
+                android:backgroundTint="@color/orange"
+                android:textColor="@color/white"
+                android:text="Apply Filters" />
+
+            <View
+                android:id="@+id/divider"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/applyFiltersButton"
+                android:background="#808080"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerSearchBooks"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scrollbars="vertical"
+                android:layout_marginTop="20dp"
+                android:layout_below="@id/applyFiltersButton"/>
+
+        </RelativeLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</RelativeLayout>

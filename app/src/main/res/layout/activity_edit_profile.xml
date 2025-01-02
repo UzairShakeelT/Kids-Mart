@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="@color/white"
+    tools:context=".EditProfileActivity">
+
+    <TextView
+        android:id="@+id/tvEditProfile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Edit Profile"
+        android:textSize="28dp"
+        android:textStyle="bold"
+        android:textColor="@color/orange"
+        android:layout_centerHorizontal="true"
+        android:padding="8dp"
+        android:layout_marginTop="50dp"/>
+
+    <TextView
+        android:id="@+id/tvName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Name: "
+        android:layout_below="@id/tvEditProfile"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        android:textColor="@color/charcoal"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="20dp" />
+
+    <EditText
+        android:id="@+id/editName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="John"
+        android:layout_below="@id/tvEditProfile"
+        android:textSize="15sp"
+        android:textColor="@color/charcoal"
+        android:backgroundTint="@color/orange"
+        android:layout_marginTop="10dp"
+        android:layout_toEndOf="@id/tvName"
+        android:layout_marginEnd="15dp"
+        android:layout_marginStart="5dp"/>
+
+    <TextView
+        android:id="@+id/tvMobile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mobile No: "
+        android:layout_below="@id/tvName"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        android:textColor="@color/charcoal"
+        android:layout_marginTop="25dp"
+        android:layout_marginStart="20dp" />
+
+    <EditText
+        android:id="@+id/editMobile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="03xxxxxxxxx"
+        android:layout_below="@id/tvName"
+        android:textSize="15sp"
+        android:inputType="phone"
+        android:maxLength="11"
+        android:textColor="@color/charcoal"
+        android:backgroundTint="@color/orange"
+        android:layout_marginTop="15dp"
+        android:layout_toEndOf="@id/tvMobile"
+        android:layout_marginEnd="15dp"
+        android:layout_marginStart="5dp"/>
+
+    <TextView
+        android:id="@+id/tvBirth"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Date of Birth: "
+        android:layout_below="@id/tvMobile"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        android:textColor="@color/charcoal"
+        android:layout_marginTop="25dp"
+        android:layout_marginStart="20dp" />
+
+    <EditText
+        android:id="@+id/editBirth"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Day-Month-Year"
+        android:layout_below="@id/tvMobile"
+        android:textSize="15sp"
+        android:textColor="@color/charcoal"
+        android:backgroundTint="@color/orange"
+        android:layout_marginTop="15dp"
+        android:layout_toEndOf="@id/tvBirth"
+        android:layout_marginEnd="15dp"
+        android:layout_marginStart="5dp"/>
+
+    <TextView
+        android:id="@+id/tvGender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Gender: "
+        android:layout_below="@id/tvBirth"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        android:textColor="@color/charcoal"
+        android:layout_marginTop="25dp"
+        android:layout_marginStart="20dp" />
+
+    <EditText
+        android:id="@+id/accGender"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Male/Female"
+        android:layout_below="@id/tvBirth"
+        android:textSize="15sp"
+        android:textColor="@color/charcoal"
+        android:backgroundTint="@color/orange"
+        android:layout_marginTop="15dp"
+        android:layout_toEndOf="@id/tvGender"
+        android:layout_marginEnd="15dp"
+        android:layout_marginStart="5dp"/>
+
+    <TextView
+        android:id="@+id/tvAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Address: "
+        android:layout_below="@id/tvGender"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        android:textColor="@color/charcoal"
+        android:layout_marginTop="25dp"
+        android:layout_marginStart="20dp" />
+
+    <EditText
+        android:id="@+id/editAddress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="House No, Appartment, Area, City"
+        android:layout_below="@id/tvGender"
+        android:textSize="15sp"
+        android:textColor="@color/charcoal"
+        android:backgroundTint="@color/orange"
+        android:inputType="textMultiLine"
+        android:layout_marginTop="15dp"
+        android:layout_toEndOf="@id/tvAddress"
+        android:layout_marginEnd="15dp"
+        android:layout_marginStart="5dp"/>
+
+    <View
+        android:id="@+id/divider1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/editAddress"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"/>
+
+    <Button
+        android:id="@+id/btnSave"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/divider1"
+        android:text="Save"
+        android:textSize="15sp"
+        android:padding="13dp"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/orange"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"/>
+
+</RelativeLayout>

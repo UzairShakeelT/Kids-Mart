@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    tools:context=".ProfileActivity">
+
+    <TextView
+        android:id="@+id/accName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Name"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:textColor="@color/orange"
+        android:layout_marginTop="50dp"
+        android:padding="8dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"/>
+
+    <ImageView
+        android:id="@+id/btnEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/baseline_edit_24"
+        android:padding="10dp"
+        android:layout_marginTop="52dp"
+        android:layout_marginEnd="10dp"/>
+
+    <TextView
+        android:id="@+id/tvEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Email: "
+        android:layout_below="@id/accName"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@color/charcoal"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="20dp" />
+
+    <TextView
+        android:id="@+id/accEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Email"
+        android:layout_below="@id/accName"
+        android:textSize="17sp"
+        android:textColor="@color/charcoal"
+        android:layout_marginTop="20dp"
+        android:layout_toEndOf="@id/tvEmail"
+        android:layout_marginEnd="15dp"
+        android:layout_marginStart="5dp"/>
+
+    <TextView
+        android:id="@+id/tvMobile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mobile No: "
+        android:layout_below="@id/tvEmail"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@color/charcoal"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="20dp" />
+
+    <TextView
+        android:id="@+id/accMobile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mobile No"
+        android:layout_below="@id/tvEmail"
+        android:textSize="17sp"
+        android:textColor="@color/charcoal"
+        android:layout_marginTop="20dp"
+        android:layout_toEndOf="@id/tvMobile"
+        android:layout_marginEnd="15dp"
+        android:layout_marginStart="5dp"/>
+
+    <TextView
+        android:id="@+id/tvBirth"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Date of Birth: "
+        android:layout_below="@id/tvMobile"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@color/charcoal"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="20dp" />
+
+    <TextView
+        android:id="@+id/accBirth"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Date of Birth"
+        android:layout_below="@id/tvMobile"
+        android:textSize="17sp"
+        android:textColor="@color/charcoal"
+        android:layout_marginTop="20dp"
+        android:layout_toEndOf="@id/tvBirth"
+        android:layout_marginEnd="15dp"
+        android:layout_marginStart="5dp"/>
+
+    <TextView
+        android:id="@+id/tvGender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Gender: "
+        android:layout_below="@id/tvBirth"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@color/charcoal"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="20dp" />
+
+    <TextView
+        android:id="@+id/accGender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Gender:"
+        android:layout_below="@id/tvBirth"
+        android:textSize="17sp"
+        android:textColor="@color/charcoal"
+        android:layout_marginTop="20dp"
+        android:layout_toEndOf="@id/tvGender"
+        android:layout_marginEnd="15dp"
+        android:layout_marginStart="5dp"/>
+
+    <TextView
+        android:id="@+id/tvAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Address: "
+        android:layout_below="@id/tvGender"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@color/charcoal"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="20dp" />
+
+    <TextView
+        android:id="@+id/accAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Address:"
+        android:layout_below="@id/tvGender"
+        android:textSize="17sp"
+        android:textColor="@color/charcoal"
+        android:layout_marginTop="20dp"
+        android:layout_toEndOf="@id/tvAddress"
+        android:layout_marginEnd="15dp"/>
+
+    <View
+        android:id="@+id/divider1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/accAddress"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"/>
+
+    <TextView
+        android:id="@+id/accPass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/divider1"
+        android:text="Reset Password"
+        android:textSize="16sp"
+        android:textColor="@color/orange"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"/>
+
+    <Button
+        android:id="@+id/btnLogout"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/accPass"
+        android:backgroundTint="#f94449"
+        android:layout_centerHorizontal="true"
+        android:text="Log Out"
+        android:textSize="14sp"
+        android:textColor="@color/white"
+        android:padding="14dp"
+        android:layout_marginTop="20dp" />
+
+</RelativeLayout>

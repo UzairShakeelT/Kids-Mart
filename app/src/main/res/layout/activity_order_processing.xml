@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="@color/white"
+    tools:context=".OrderProcessingActivity">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@id/tvOrderID"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Order ID"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_below="@id/orderDate"
+                android:textColor="@color/charcoal"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="15dp"/>
+
+            <TextView
+                android:id="@+id/orderDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Date"
+                android:textSize="16sp"
+                android:textColor="@color/charcoal"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="20dp" />
+
+            <TextView
+                android:id="@+id/tvTracking"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tracking Status:"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/charcoal"
+                android:layout_below="@id/tvOrderID"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="15dp"/>
+
+            <TextView
+                android:id="@+id/trackingStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Status"
+                android:textSize="23sp"
+                android:textStyle="bold"
+                android:textColor="@color/orange"
+                android:layout_below="@id/tvTracking"
+                android:layout_centerHorizontal="true"
+                android:textAllCaps="true"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"/>
+
+            <TextView
+                android:id="@+id/tvOrderDetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Order Details:"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/charcoal"
+                android:layout_below="@id/trackingStatus"
+                android:layout_marginStart="15dp"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/detailProduct"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvOrderDetails"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"/>
+
+            <View
+                android:id="@+id/divider1"
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:layout_below="@id/detailProduct"
+                android:background="#D3D3D3"/>
+
+            <TextView
+                android:id="@+id/tvMobileNum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mobile No: "
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/charcoal"
+                android:layout_below="@id/divider1"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="15dp" />
+
+            <TextView
+                android:id="@+id/MobileNum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mobile No"
+                android:textSize="16sp"
+                android:textColor="@color/charcoal"
+                android:layout_below="@id/divider1"
+                android:layout_marginEnd="10dp"
+                android:layout_marginTop="15dp"
+                android:layout_toEndOf="@id/tvMobileNum"/>
+
+            <TextView
+                android:id="@+id/tvPaymentMode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Payment Method: "
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/charcoal"
+                android:layout_below="@id/tvMobileNum"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="15dp" />
+
+            <TextView
+                android:id="@+id/paymentMethod"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Payment"
+                android:textSize="16sp"
+                android:textColor="@color/charcoal"
+                android:layout_below="@id/tvMobileNum"
+                android:layout_marginEnd="10dp"
+                android:layout_marginTop="15dp"
+                android:layout_toEndOf="@id/tvPaymentMode"/>
+
+            <TextView
+                android:id="@+id/tvAdress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Address: "
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/charcoal"
+                android:layout_below="@id/tvPaymentMode"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="15dp" />
+
+            <TextView
+                android:id="@+id/address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Address"
+                android:textSize="16sp"
+                android:textColor="@color/charcoal"
+                android:layout_below="@id/tvPaymentMode"
+                android:layout_marginEnd="10dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="10dp"
+                android:layout_toEndOf="@id/tvAdress"/>
+
+            <View
+                android:id="@+id/divider2"
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:layout_below="@id/address"
+                android:background="#D3D3D3"/>
+
+            <TextView
+                android:id="@+id/tvDeliveryCharges"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/divider2"
+                android:text="Delivery Charges"
+                android:textSize="16sp"
+                android:textColor="@color/charcoal"
+                android:layout_marginTop="15dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="10dp"/>
+
+            <TextView
+                android:id="@+id/deliveryCharges"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/divider2"
+                android:text="Rs. 200"
+                android:textSize="17dp"
+                android:textStyle="bold"
+                android:textColor="@color/orange"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="20dp"
+                android:layout_alignParentRight="true"/>
+
+            <TextView
+                android:id="@+id/tvTotal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Total"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/charcoal"
+                android:layout_below="@id/tvDeliveryCharges"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="20dp"/>
+
+            <TextView
+                android:id="@+id/orderTotal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="total"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/orange"
+                android:layout_below="@id/tvDeliveryCharges"
+                android:layout_marginEnd="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="20dp"
+                android:layout_alignParentRight="true"/>
+
+            <Button
+                android:id="@+id/btnShip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Fulfill &amp; Ship"
+                android:textSize="14sp"
+                android:textColor="@color/orange"
+                android:backgroundTint="@color/white"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/tvTotal"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="30dp"
+                app:rippleColor="#33AAAAAA"
+                app:strokeColor="@color/orange"
+                app:strokeWidth="2dp"
+                android:visibility="gone"
+                style="@style/Widget.MaterialComponents.Button.TextButton"/>
+
+            <Button
+                android:id="@+id/btnDeliver"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Confirm Delivery"
+                android:textSize="14sp"
+                android:textColor="@color/white"
+                android:backgroundTint="@color/orange"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/tvTotal"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="30dp"
+                android:visibility="gone"
+                style="@style/Widget.MaterialComponents.Button.TextButton"/>
+
+            <TextView
+                android:id="@+id/deleteOrder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Delete Order"
+                android:textSize="15sp"
+                android:textColor="#f94449"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="15dp"/>
+
+        </RelativeLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</RelativeLayout>

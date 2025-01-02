@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="@color/white"
+    tools:context=".MenuActivity">
+
+    <TextView
+        android:id="@+id/tabMenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:text="Menu"
+        android:textColor="@color/orange"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="70dp"/>
+
+    <TextView
+        android:id="@+id/tabProfile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tabMenu"
+        android:text="Profile"
+        android:padding="14dp"
+        android:textSize="18sp"
+        android:textColor="@color/charcoal"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="15dp"/>
+
+    <View
+        android:id="@+id/divider1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/tabProfile"
+        android:background="#D3D3D3"/>
+
+    <TextView
+        android:id="@+id/tabOrder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/divider1"
+        android:text="Orders"
+        android:padding="14dp"
+        android:textSize="18sp"
+        android:textColor="@color/charcoal"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="15dp"/>
+
+    <View
+        android:id="@+id/divider2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/tabOrder"
+        android:background="#D3D3D3"/>
+
+    <TextView
+        android:id="@+id/tabHelp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/divider2"
+        android:text="Help"
+        android:padding="15dp"
+        android:textSize="18sp"
+        android:textColor="@color/charcoal"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="15dp"/>
+
+    <View
+        android:id="@+id/divider3"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/tabHelp"
+        android:background="#D3D3D3"/>
+
+    <TextView
+        android:id="@+id/tabAbout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/divider3"
+        android:text="About"
+        android:padding="15dp"
+        android:textSize="18sp"
+        android:textColor="@color/charcoal"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="15dp"/>
+
+    <View
+        android:id="@+id/divider4"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/tabAbout"
+        android:background="#D3D3D3"/>
+
+</RelativeLayout>

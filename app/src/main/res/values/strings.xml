@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">Kids Mart</string>
+
+    <string-array name="categories">
+        <item>Category</item>
+        <item>Apparel</item>
+        <item>Toys</item>
+        <item>Books</item>
+        <item>Footwear</item>
+    </string-array>
+
+    <string-array name="colors">
+        <item>Color</item>
+        <item>Red</item>
+        <item>Green</item>
+        <item>Blue</item>
+        <item>Yellow</item>
+        <item>Orange</item>
+        <item>White</item>
+        <item>Black</item>
+        <item>Pink</item>
+        <item>Brown</item>
+    </string-array>
+
+    <string-array name="payment">
+        <item>Select Payment</item>
+        <item>Cash On Delivery</item>
+        <item>Credit Card</item>
+        <item>EasyPaisa</item>
+        <item>JazzCash</item>
+    </string-array>
+</resources>

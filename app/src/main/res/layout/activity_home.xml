@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    android:scrollbars="none"
+    tools:context=".HomeActivity">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp"
+        android:scrollbars="none">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:scrollbars="none">
+
+            <ImageView
+                android:id="@+id/menu"
+                android:layout_width="35dp"
+                android:layout_height="45dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/baseline_menu_24"/>
+
+            <SearchView
+                android:id="@+id/searchHome"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_below="@+id/tvKidsMart"
+                android:background="@drawable/orange_border"
+                android:textColor="@color/charcoal"
+                android:queryBackground="@null"
+                android:closeIcon="@drawable/baseline_clear_24"
+                android:focusable="false"
+                android:iconifiedByDefault="false"
+                android:queryHint="Search"
+                android:searchHintIcon="@null"
+                android:searchIcon="@drawable/baseline_search_24" />
+
+            <ImageView
+                android:id="@+id/imgCartHome"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/baseline_shopping_cart_24"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="14dp"
+                android:layout_marginEnd="5dp"/>
+
+            <TextView
+                android:id="@+id/tvKidsMart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Kids Mart"
+                android:textSize="30sp"
+                android:textColor="@color/orange"
+                android:fontFamily="sans-serif-medium"
+                android:shadowColor="#C65134"
+                android:shadowRadius="2"
+                android:shadowDx="1"
+                android:shadowDy="1"
+                android:paddingHorizontal="24dp"
+                android:paddingVertical="10dp"
+                android:layout_centerHorizontal="true"/>
+
+            <ImageView
+                android:id="@+id/imgBannerHome"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="5dp"
+                android:backgroundTint="@color/transparent"
+                android:src="@drawable/kid_banner_home"
+                android:layout_below="@+id/searchHome"/>
+
+            <TextView
+                android:id="@+id/tvCategoryHome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Category"
+                android:layout_marginTop="10dp"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@color/charcoal"
+                android:layout_below="@id/imgBannerHome"/>
+
+            <LinearLayout
+                android:id="@+id/layoutCategory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvCategoryHome"
+                android:background="@color/white"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/imgApparel"
+                    android:layout_width="70dp"
+                    android:layout_height="60dp"
+                    android:backgroundTint="@color/transparent"
+                    android:clickable="true"
+                    android:scaleType="fitXY"
+                    android:layout_weight="1"
+                    android:src="@drawable/apparel"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="8dp" />
+
+                <ImageButton
+                    android:id="@+id/imgToys"
+                    android:layout_width="70dp"
+                    android:layout_height="60dp"
+                    android:backgroundTint="@color/transparent"
+                    android:clickable="true"
+                    android:scaleType="fitXY"
+                    android:layout_weight="1"
+                    android:src="@drawable/toys"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp" />
+
+                <ImageButton
+                    android:id="@+id/imgBooks"
+                    android:layout_width="70dp"
+                    android:layout_height="60dp"
+                    android:backgroundTint="@color/transparent"
+                    android:clickable="true"
+                    android:scaleType="fitXY"
+                    android:layout_weight="1"
+                    android:src="@drawable/books"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp" />
+
+                <ImageButton
+                    android:id="@+id/imgFootWear"
+                    android:layout_width="70dp"
+                    android:layout_height="60dp"
+                    android:backgroundTint="@color/transparent"
+                    android:clickable="true"
+                    android:scaleType="fitXY"
+                    android:layout_weight="1"
+                    android:src="@drawable/footwear"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layoutTvCategory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/layoutCategory">
+
+                <TextView
+                    android:id="@+id/tvApparel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Apparel"
+                    android:textColor="@color/charcoal"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:layout_weight="1"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginEnd="15dp"/>
+
+                <TextView
+                    android:id="@+id/tvToys"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Toys"
+                    android:textColor="@color/charcoal"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:layout_weight="1"
+                    android:layout_marginStart="22dp"
+                    android:layout_marginEnd="15dp"/>
+
+                <TextView
+                    android:id="@+id/tvBooks"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Books"
+                    android:textColor="@color/charcoal"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:layout_weight="1"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginEnd="10dp"/>
+
+                <TextView
+                    android:id="@+id/tvFootwear"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Foot Wear"
+                    android:textColor="@color/charcoal"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:layout_weight="0.5"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="10dp"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvProductsHome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Products"
+                android:layout_marginTop="20dp"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@color/charcoal"
+                android:layout_below="@id/layoutTvCategory"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewHome"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp"
+                android:layout_below="@id/tvProductsHome"
+                android:layout_alignParentStart="true"/>
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_below="@id/tvProductsHome"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="35dp"
+                android:indeterminateTint="@color/orange"
+                android:visibility="gone"/>
+
+        </RelativeLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</RelativeLayout>

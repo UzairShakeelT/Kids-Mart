@@ -1,0 +1,146 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    tools:context=".SearchResultsActivity">
+
+    <SearchView
+        android:id="@+id/searchResultsView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/orange_border"
+        android:textColor="@color/charcoal"
+        android:queryBackground="@null"
+        android:closeIcon="@drawable/baseline_clear_24"
+        android:focusable="false"
+        android:iconifiedByDefault="false"
+        android:queryHint="Search"
+        android:searchHintIcon="@null"
+        android:searchIcon="@drawable/baseline_search_24" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/searchResultsView"
+        android:padding="10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Spinner
+                android:id="@+id/filterCategory"
+                android:layout_width="170dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="15dp"
+                android:textColor="@color/charcoal"
+                android:entries="@array/categories" />
+
+            <Spinner
+                android:id="@+id/filterColor"
+                android:layout_width="170dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:textColor="@color/charcoal"
+                android:layout_toEndOf="@id/filterCategory"
+                android:entries="@array/colors" />
+
+            <EditText
+                android:id="@+id/minPrice"
+                android:layout_width="170dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="15dp"
+                android:layout_below="@id/filterColor"
+                android:hint="Min Price"
+                android:inputType="number"
+                android:textSize="15sp"
+                android:textColor="@color/charcoal"
+                android:backgroundTint="@color/orange"/>
+
+            <EditText
+                android:id="@+id/maxPrice"
+                android:layout_width="170dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="10dp"
+                android:backgroundTint="@color/orange"
+                android:layout_below="@id/filterColor"
+                android:layout_toEndOf="@id/minPrice"
+                android:hint="Max Price"
+                android:textSize="15sp"
+                android:textColor="@color/charcoal"
+                android:inputType="number"/>
+
+            <TextView
+                android:id="@+id/resetFilters"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_below="@id/maxPrice"
+                android:layout_marginStart="35dp"
+                android:text="Reset Filters"
+                android:textColor="@color/orange"
+                android:textSize="16sp"
+                android:clickable="true" />
+
+            <Button
+                android:id="@+id/applyFiltersButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="70dp"
+                android:layout_below="@id/maxPrice"
+                android:layout_toEndOf="@id/resetFilters"
+                android:backgroundTint="@color/orange"
+                android:textColor="@color/white"
+                android:text="Apply Filters" />
+
+            <View
+                android:id="@+id/divider"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/applyFiltersButton"
+                android:background="#808080"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerSearchResults"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scrollbars="vertical"
+                android:layout_marginTop="20dp"
+                android:layout_below="@id/applyFiltersButton"/>
+
+            <TextView
+                android:id="@+id/searchError"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="No Product Found"
+                android:textSize="18sp"
+                android:textColor="@color/charcoal"
+                android:layout_below="@id/divider"
+                android:layout_marginTop="30dp"
+                android:layout_centerHorizontal="true"
+                android:visibility="gone"/>
+
+        </RelativeLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</RelativeLayout>
